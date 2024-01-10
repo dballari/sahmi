@@ -1,2 +1,2 @@
-# sahmi
-Simply add hidden menu items
+# Simply add hidden menu items
+
