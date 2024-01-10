@@ -1,6 +1,6 @@
 # Simply add hidden menu items
 
-For the moment this plugin only does what it says: adds the patterns and the navigation menu item just below the pages menu item.
+For the moment this plugin only does what it says: adds the patterns and the navigation menu items just below the pages menu item.
 
 In the future I would like to give the patterns screen some enhancements.
 
