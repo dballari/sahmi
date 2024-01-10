@@ -4,7 +4,7 @@
  * @wordpress-plugin
  * Plugin Name: Simply add hidden menu items
  * Plugin URI: https://ballarinconsulting.com/plugins/sahmi
- * Description: Adds some menu items that are normally hidden to speed up up the access to them (patterns & navigation)
+ * Description: Adds some menu items (patterns & navigation) that are hidden in the main wp admin menu, to speed up up the access to them.
  * Version: 1.0.0
  * Author: David B P (AI assisted)
  * Author URI: https://ballarinconsulting.com/acerca
