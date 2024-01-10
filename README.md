@@ -4,4 +4,4 @@ For the moment this plugin only does what it says: adds the patterns and the nav
 
 In the future I would like to give the patterns screen some enhancements.
 
-I'm now into designing and creating themes so writing plugins is not my main activity. To speed up this development I use the assistance of Chat GPT. I also accept human contributions.
+I'm now into designing and creating themes so writing plugins is not my main activity. To speed up this development I will probably use the AI assistance. I also accept human contributions.
