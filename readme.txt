@@ -22,9 +22,9 @@ To test this plugin, you may use a demo site with the Twentytwentyfour theme act
 5. Now, managing the footer and header content is easier, just edit the synced pattern.
 6. Feel free to move your customized content to another site with the import / export tool, the referencial integrity of synced patterns and menus will not be lostlost if you either delete first all the content of the destination site or you use the sahmin plugin.
 
-[patterns](assets/screenshot-1.png)
+![patterns](assets/screenshot-1.png)
 
-[menus](assets/screenshot-2.png)
+![menus](assets/screenshot-2.png)
 
 == Changelog ==
 
