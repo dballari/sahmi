@@ -15,7 +15,7 @@ To test this plugin, you may use a demo site with the Twentytwentyfour theme act
 3. Repeat the same thing with the Footer template part.
 4. Go to the patterns & menus items that you will see bellow the comments menu item and you will find your two recently created synced patterns.
 5. Now, managing the footer and header content is easier, just edit the synced pattern. An you will be able to acces all your customizations from the main admin menu. User patterns and menus are a very important part of users content and they deserve a menu item to access them directly as any other piece of content (media, posts, pages, comments, ...)
-6. Feel free to move your customized content to another site with the import / export tool, the referencial integrity of synced patterns and menus will not be lostlost if you either delete first all the content of the destination site or you use the sahmin plugin.
+6. Feel free to move your customized content to another site with the import / export tool, the referencial integrity of synced patterns and menus will not be lost if you either delete first all the content of the destination site or you use the sahmi plugin.
 
 ![patterns](assets/screenshot-1.png)
 
