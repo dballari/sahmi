@@ -11,7 +11,7 @@ Adds the patterns and menus items in the WordPress administration menu with some
 To test this plugin, you may use a demo site with the Twentytwentyfour theme activated, for instante.
 
 1. Activate the sahmi plugin and go to the patterns section of the site editor.
-2. Edit the Header template part and create a synced pattern from the group block that groups all the header blocks together.
+2. Edit the Header template part and create a synced pattern from the group block that groups all the blocks included in the header.
 3. Repeat the same thing with the Footer template part.
 4. Go to the patterns & menus items that you will seen bellow the comments menu item and you will find your two recently crated synced patterns.
 5. Now, managing the footer and header content is easier, just edit the synced pattern.
