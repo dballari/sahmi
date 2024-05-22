@@ -251,7 +251,8 @@ function posts_included_in($ref, $type) {
         $wpdb->prepare(
             "SELECT ID, post_title, post_type 
             FROM {$wpdb->posts} 
-            WHERE `post_content` LIKE %s",
+            WHERE `post_content` LIKE %s
+            AND `post_status` = 'publish'",
             $string
         )
     );

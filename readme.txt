@@ -28,5 +28,8 @@ To test this plugin, you may use a demo site with the Twentytwentyfour theme act
 
 == Changelog ==
 
+= 1.0.1 =
+* removed not published posts from included in search querty results
+
 = 1.0.0 =
 * Initial vesion released
