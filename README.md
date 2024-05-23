@@ -1,10 +1,6 @@
 # Simply add hidden menu items
 
-Adds the patterns and menus items in the WordPress administration menu with some useful columns to the patterns and menus pages, and improves the import process of the WordPress Importer plugin.
-
-== Description ==
-
-Adds the patterns and menus items in the WordPress administration menu with some useful columns to the patterns and menus pages, and improves the import process of the WordPress Importer plugin, so that when synced patterns or menus are imported with a different id than the original XML file has, content is replaced with references to the new ids.
+Adds the patterns and menus items in the WordPress administration menu with some useful columns and improves the import process of the WordPress Importer plugin, so that when synced patterns or menus are imported with a different id than the original XML file has, content is replaced with references to the new ids.
 
 ## Example of usage
 
@@ -22,6 +18,9 @@ To test this plugin, you may use a demo site with the Twentytwentyfour theme act
 ![menus](assets/screenshot-2.png)
 
 == Changelog ==
+
+= 1.0.1 =
+* removed not published posts from included in search querty results
 
 = 1.0.0 =
 * Initial vesion released
