@@ -1,5 +1,6 @@
 === Simply add hidden menu items ===
 Contributors: dballari
+Donate link: https://pay.sumup.com/b2c/QFMKLYCT
 Tags: site-editor, patterns, navigation, wp-admin, creator
 Requires at least: 6.5
 Stable tag: 1.0.1

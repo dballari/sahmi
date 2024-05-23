@@ -2,20 +2,35 @@
 /**
  * @wordpress-plugin
  * Plugin Name: Simply add hidden menu items
- * Plugin URI: https://ballarinconsulting.com/acerca
+ * Plugin URI: https://ballarinconsulting.com/plugins
  * Description: Adds the patterns and menus items in the WordPress administration menu with some useful columns to the patterns and menus pages, and improves the import process of the WordPress Importer plugin.
- * Version: 1.0.0
- * Requires at least: 6.4
+ * Version: 1.0.1
+ * Requires at least: 6.5
  * Requires PHP: 7
  * Author: David Ballarin Prunera
- * Author URI: https://ballarinconsulting.com/acerca
+ * Author URI: https://profiles.wordpress.org/dballari/
  * License: GNU General Public License v3
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: sahmi
  */
 
 
+/*
+Simply add hidden menu items is free software: you can redistribute
+it and/or modify it under the terms of the GNU General Public 
+License as published by the Free Software Foundation, either 
+version 2 of the License, or any later version.
+
+Simply add hidden menu items is distributed in the hope that it will
+be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details here: 
+http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+
 namespace Sahmi;
+
 
 /**
  * To use this plugin in debug mode, please, 
