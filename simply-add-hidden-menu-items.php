@@ -4,7 +4,7 @@
  * Plugin Name: Simply add hidden menu items
  * Plugin URI: https://ballarinconsulting.com/plugins
  * Description: Adds the patterns and menus items in the WordPress administration menu with some useful columns to the patterns and menus pages, and improves the import process of the WordPress Importer plugin.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Requires at least: 6.5
  * Requires PHP: 7
  * Author: David Ballarin Prunera
