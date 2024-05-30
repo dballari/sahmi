@@ -258,19 +258,30 @@ function posts_included_in($ref, $type) {
     global $wpdb;
     if($type == 'pattern') {
         $string = '%<!-- wp:block {"ref":' . $ref . '} /-->%';
+        $results = $wpdb->get_results(
+            $wpdb->prepare(
+                "SELECT ID, post_title, post_type 
+                FROM {$wpdb->posts} 
+                WHERE `post_content` LIKE %s
+                AND `post_status` = 'publish'",
+                $string
+            )
+        );
     }
     if($type == 'menu') {
-        $string = '%<!-- wp:navigation {"ref":' . $ref . '%';
+        $string1 = '%<!-- wp:navigation {"ref":' . $ref . '}%';
+        $string2 = '%<!-- wp:navigation {"ref":' . $ref . ',%';
+        $results = $wpdb->get_results(
+            $wpdb->prepare(
+                "SELECT ID, post_title, post_type 
+                FROM {$wpdb->posts} 
+                WHERE (`post_content` LIKE %s OR `post_content` LIKE %s)
+                AND `post_status` = 'publish'",
+                $string1,
+                $string2
+            )
+        );
     }
-    $results = $wpdb->get_results(
-        $wpdb->prepare(
-            "SELECT ID, post_title, post_type 
-            FROM {$wpdb->posts} 
-            WHERE `post_content` LIKE %s
-            AND `post_status` = 'publish'",
-            $string
-        )
-    );
     $string_result = '';
     foreach($results as $result) {
         if ( $result->post_type != 'revision' ) {
