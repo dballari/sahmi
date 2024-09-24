@@ -4,7 +4,7 @@
  * Plugin Name: Simply add hidden menu items
  * Plugin URI: https://ballarinconsulting.com/plugins
  * Description: Adds the patterns and menus items in the WordPress administration menu with some useful columns to the patterns and menus pages, and improves the import process of the WordPress Importer plugin.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Requires at least: 6.5
  * Requires PHP: 7
  * Author: David Ballarin Prunera
@@ -218,16 +218,16 @@ function add_content_to_pattern_columns($column_key, $post_id) {
     $synced = !get_post_meta($post_id, 'wp_pattern_sync_status', true);
 	if ($column_key == 'synced') {
 		if ($synced) {
-			echo '<span style="color:green;">'; _e('Synced', 'sahmi' ); echo '</span>';
+			echo '<span style="color:green;">'; esc_html_e('Synced', 'sahmi' ); echo '</span>';
 		} else {
-			echo '<span style="color:red;">'; _e('Unsynced', 'sahmi' ); echo '</span>';
+			echo '<span style="color:red;">'; esc_html_e('Unsynced', 'sahmi' ); echo '</span>';
 		}
 	}
     if ($column_key == 'postid') {
-        echo '<span style="font-weight: 800;text-align: right;">'.$post_id; echo '</span>';
+        echo '<span style="font-weight: 800;text-align: right;">'.esc_html($post_id); echo '</span>';
     }
     if($column_key == 'included_in' && $synced) {
-        echo posts_included_in($post_id, 'pattern');
+        echo esc_html(posts_included_in($post_id, 'pattern'));
     }
 }
 
@@ -237,10 +237,10 @@ function add_content_to_pattern_columns($column_key, $post_id) {
  */
 function add_content_to_menus_columns($column_key, $post_id) {
     if ($column_key == 'postid') {
-        echo '<span style="font-weight: 800;text-align: right;">'.$post_id; echo '</span>';
+        echo '<span style="font-weight: 800;text-align: right;">'.esc_html($post_id); echo '</span>';
     }
     if($column_key == 'included_in') {
-        echo posts_included_in($post_id, 'menu');
+        echo esc_html(posts_included_in($post_id, 'menu'));
     }
 }
 
@@ -352,7 +352,10 @@ function patterns_page_css($hook) {
     //Enqueue Admin CSS on wp_block page only
     if ( isset( $_GET['post_type'] ) && $_GET['post_type'] == 'wp_block' ) {
         wp_enqueue_style( 'sahmi', 
-        plugin_dir_url( __FILE__ ) . 'assets/css/sahmi.css');
+            plugin_dir_url( __FILE__ ) . 'assets/css/sahmi.css',
+            array(),
+            get_file_data( __FILE__, array('Version'), 'plugin')
+        );
     }
 }
 
@@ -405,13 +408,14 @@ function add_ref_modified_message(
             !is_unsynced($post)
         ) {
             printf(
-                __(
+                /* translators: 1, 2: ID or ref of a pattern */
+                esc_html_e(
                     'Synced pattern %1$s imported with ID %2$u different than the original ID %3$u.', 
                     'sahmi'
                 ),
-                $post['post_title'],
-                $post_id,
-                $original_post_id
+                esc_html($post['post_title']),
+                esc_html($post_id),
+                esc_html($original_post_id)
             );
             $update = true;
             if ( defined( 'IMPORT_DEBUG' ) && IMPORT_DEBUG ) {
@@ -426,13 +430,14 @@ function add_ref_modified_message(
             $post_id != $original_post_id
         ) {
             printf(
-                __(
+                /* translators: 1: post title 2, 3: ID or ref of the menu */
+                esc_html_e(
                     'Navigation menu %1$s imported with ID %2$u different than the original ID %3$u.', 
                     'sahmi'
                 ),
-                $post['post_title'],
-                $post_id,
-                $original_post_id
+                esc_html($post['post_title']),
+                esc_html($post_id),
+                esc_html($original_post_id)
             );
             $update = true;
             if ( defined( 'IMPORT_DEBUG' ) && IMPORT_DEBUG ) {
@@ -503,7 +508,7 @@ function is_unsynced(
 function initialize_plugin_options() {
     $result = update_option( 'sahmi_options', [] );
     if ( defined( 'IMPORT_DEBUG' ) && IMPORT_DEBUG ) {
-        echo '<p>SAHMI options initialized ' . $result . '</p>';
+        echo '<p>SAHMI options initialized ' . esc_html($result) . '</p>';
     }
 }
 
@@ -532,7 +537,8 @@ function replace_old_ids() {
                     )
                 );
                 printf(
-                    __( 'Replacement done: %s replaced by %s', 
+                    /* translators: 1: string to find 2: string to replpace */
+                    esc_html_e( 'Replacement done: %1$s replaced by %2$s', 
                         'sahmi' ),
                     esc_html($string_to_find),
                     esc_html($string_to_replace)

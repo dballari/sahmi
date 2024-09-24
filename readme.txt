@@ -3,12 +3,13 @@ Contributors: dballari
 Donate link: https://pay.sumup.com/b2c/QFMKLYCT
 Tags: site-editor, patterns, navigation, wp-admin, creator
 Requires at least: 6.5
-Stable tag: 1.0.1
+Tested up to: 6.6
+Stable tag: 1.0.3
 Requires PHP: 7.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Adds the patterns and menus items in the WordPress administration menu with some useful columns, and improves the import process of the WordPress Importer plugin.
+Adds the patterns and menus items in the WordPress administration menu with useful columns, and improves the WordPRess import plugin.
 
 == Description ==
 
@@ -20,7 +21,7 @@ To test this plugin, you may use a demo site with the Twentytwentyfour theme act
 2. Edit the Header template part and create a synced pattern from the group block that groups all the blocks included in the header.
 3. Repeat the same thing with the Footer template part.
 4. Go to the patterns & menus items that you will see bellow the comments menu item and you will find your two recently created synced patterns.
-5. Now, managing the footer and header content is easier, just edit the synced pattern. An you will be able to acces all your customizations from the main admin menu. User patterns and menus are a very important part of users content and they deserve a menu item to access them directly as any other piece of content (media, posts, pages, comments, ...)
+5. Now, you will be able to acces all your customizations from the main admin menu.
 6. Feel free to move your customized content to another site with the import / export tool, the referencial integrity of synced patterns and menus will not be lost if you either delete first all the content of the destination site or you use the sahmi plugin.
 
 ![patterns](assets/screenshot-1.png)
@@ -29,11 +30,14 @@ To test this plugin, you may use a demo site with the Twentytwentyfour theme act
 
 == Changelog ==
 
+= 1.0.3 =
+* corrections after running plugin check
+
 = 1.0.2 =
 * fixed a bug on posts_included_in function
 
 = 1.0.1 =
-* removed not published posts from included in search querty results
+* removed not published posts from included in search query results
 
 = 1.0.0 =
 * Initial vesion released
