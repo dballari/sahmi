@@ -50,7 +50,11 @@ if (
 }
 
 function sahmi_footer_admin_text($text) {
-    $text .= ' And thank you for using the <a href="'.get_plugin_data( __FILE__ )['PluginURI'].'">SAHMI</a> plugin.';
+    $text .= ' ' . sprintf(
+	    /* translators: 1: plugin url */
+	    __( 'And thank you for using the <a href="%1$s">SAHMI</a> plugin.', 'sahmi' ),
+        esc_html(get_plugin_data( __FILE__ )['PluginURI'])
+    );
     return $text;
 }
 
