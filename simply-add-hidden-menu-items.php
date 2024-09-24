@@ -42,6 +42,18 @@ namespace Sahmi;
  * be activated.
  */
 
+if (
+    $GLOBALS['pagenow'] == 'edit.php' && 
+    isset($_GET['post_type']) && ($_GET['post_type'] == 'wp_block' || $_GET['post_type'] == 'wp_navigation')
+) {
+    add_filter('admin_footer_text', __NAMESPACE__ . '\sahmi_footer_admin_text');
+}
+
+function sahmi_footer_admin_text($text) {
+    $text .= ' And thank you for using the <a href="'.get_plugin_data( __FILE__ )['PluginURI'].'">SAHMI</a> plugin.';
+    return $text;
+}
+
 /**
  * Create the creator role when plugin activated
  * like an editor with some more capabilities

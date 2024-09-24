@@ -31,6 +31,7 @@ To test this plugin, you may use a demo site with the Twentytwentyfour theme act
 == Changelog ==
 
 = 1.0.3 =
+* and thanyou text in admin footer
 * corrections after running plugin check
 
 = 1.0.2 =
