@@ -243,7 +243,15 @@ function add_content_to_pattern_columns($column_key, $post_id) {
         echo '<span style="font-weight: 800;text-align: right;">'.esc_html($post_id); echo '</span>';
     }
     if($column_key == 'included_in' && $synced) {
-        echo esc_html(posts_included_in($post_id, 'pattern'));
+        echo wp_kses(
+            posts_included_in($post_id, 'pattern'),
+            array(
+                'a' => array(
+                    'href'  => array(),
+                    'title' => array(),
+                ),
+            )
+        );
     }
 }
 
@@ -256,7 +264,15 @@ function add_content_to_menus_columns($column_key, $post_id) {
         echo '<span style="font-weight: 800;text-align: right;">'.esc_html($post_id); echo '</span>';
     }
     if($column_key == 'included_in') {
-        echo esc_html(posts_included_in($post_id, 'menu'));
+        echo wp_kses(
+            posts_included_in($post_id, 'menu'),
+            array(
+                'a' => array(
+                    'href'  => array(),
+                    'title' => array(),
+                ),
+            )
+        );
     }
 }
 
